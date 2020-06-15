@@ -15,6 +15,6 @@ function tweetIambic(syllableCount) {
     });
 }
 
-// cron.schedule('0 */3 * * *', () => {
+cron.schedule('0 */3 * * *', () => {
     tweetIambic(14);
-// });
+});
