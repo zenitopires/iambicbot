@@ -17,13 +17,3 @@ module.exports = {
         return iambicPhrase;
     }
 }
-
-/**
- * Function modifies verb into past-tense form
- * @param {string} verb
- */
-function modifyVerb(verb) {
-    const Python = childProc.spawnSync('python', ['./conjugation.py', verb]);
-    let pastTense =  Python.stdout.toString('utf-8');
-    return pastTense;
-}
