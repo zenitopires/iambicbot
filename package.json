@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "node-cron": "^2.0.3",
+    "python-shell": "^2.0.1",
     "syllable": "^4.1.0",
     "twit": "^2.2.11"
   }

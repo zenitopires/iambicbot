@@ -2,11 +2,11 @@
 
 const fs = require('fs');
 const syllable = require('syllable');
+const childProc = require('child_process')
 
-let noun, verb, adjective, adverb, pronoun = [];
+let noun, verb, adverb, pronoun = [];
 noun = fs.readFileSync('./words/nouns', 'utf-8').split('\n');
 verb = fs.readFileSync('./words/verbs', 'utf-8').split('\n');
-adjective = fs.readFileSync('./words/adjectives', 'utf-8').split('\n');
 adverb = fs.readFileSync('./words/adverbs', 'utf-8').split('\n');
 pronoun = ['You', 'I', 'She', 'He', 'They', 'Mankind'];
 
@@ -25,8 +25,10 @@ module.exports = {
 
         randomVerb = modifyVerb(randomVerb);
 
+        randomVerb = randomVerb.replace(/(\r\n|\n|\r)/gm, "");
+
         let iambicPhrase = randomPronoun + ' ' + randomAdverb + ' ' + randomVerb + ' ' + randomNoun + '.';
-        
+
         if (syllable(iambicPhrase) == count) {
             return iambicPhrase;
         }
@@ -37,16 +39,11 @@ module.exports = {
 }
 
 /**
- * Function modifies verb ending depending on last character
- * To-Do: Account for other vowels and consonants and find
- *        their appropriate verbs
- * @param {array of verbs} verb
+ * Function modifies verb into past-tense form
+ * @param {string} verb
  */
 function modifyVerb(verb) {
-    switch (verb.charAt(verb.length - 1)) {
-        case 'e':
-            return verb + 'd';
-        default:
-            return verb;
-    }
+    const Python = childProc.spawnSync('python', ['./conjugation.py', verb]);
+    let pastTense =  Python.stdout.toString('utf-8');
+    return pastTense;
 }
