@@ -29,7 +29,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
     $ cd iambicbot
 
 ## Configure authorization
-Create a `config.js` file and enter your Twitter authorization keys like so:
+Create a `config.js` file in the iambicbot directory and enter your Twitter authorization keys like so:
   ```
   module.exports = {
     consumer_key:         'API_key',
