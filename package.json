@@ -4,13 +4,13 @@
   "description": "The most poetic bot.",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bot.js"
   },
   "author": "Zenito Pires",
   "license": "ISC",
   "dependencies": {
     "node-cron": "^2.0.3",
-    "python-shell": "^2.0.1",
     "syllable": "^4.1.0",
     "twit": "^2.2.11"
   }
