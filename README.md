@@ -22,9 +22,14 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
 - #### Other Operating Systems
   You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
-  
-## Configure app
-Create a `config.js` file and enter your Twitter Authorization keys like so:
+
+## Downloading Iambic Bot
+
+    $ git clone https://github.com/zenitopires/iambicbot
+    $ cd iambicbot
+
+## Configure authorization
+Create a `config.js` file and enter your Twitter authorization keys like so:
   ```
   module.exports = {
     consumer_key:         'API_key',
@@ -33,10 +38,5 @@ Create a `config.js` file and enter your Twitter Authorization keys like so:
     access_token_secret:  'Access_token_secret'
   }
   ```
-  
 ## Running Iambic Bot
-
-    $ git clone https://github.com/zenitopires/iambicbot
-    $ cd iambicbot
     $ npm start
-
