@@ -19,9 +19,32 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
       $ sudo apt install nodejs
       $ sudo apt install npm
+      
+- #### Node installation on Fedora (this will install npm and nodejs)
 
+      $ sudo dnf install nodejs
+
+- #### Node installation on Arch Linux
+
+      $ sudo pacman -S nodejs
+      $ sudo pacman -S npm
+      
 - #### Other Operating Systems
   You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
+
+### Python
+- #### Install Python 3.6 
+  You will need Python 3.6 for the `Pattern` package to work. You can download Python 3.6 on the [official Python website](https://www.python.org/downloads/release/python-360/). 
+- #### Pattern module installation 
+  And you'll also need to download `Pattern` which you you can install by running the following commands.
+  
+      $ git clone https://github.com/clips/pattern
+      $ cd pattern
+      $ python setup.py install
+  
+  Or you can install the package using pip
+
+      $ pip install pattern
 
 ## Usage
 
