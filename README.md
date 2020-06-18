@@ -28,7 +28,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
     $ git clone https://github.com/zenitopires/iambicbot
     $ cd iambicbot
 
-## Configure authorization
+## Configuring Authorization
 Create a `config.js` file in the iambicbot directory and enter your Twitter authorization keys like so:
   ```
   module.exports = {
@@ -38,5 +38,9 @@ Create a `config.js` file in the iambicbot directory and enter your Twitter auth
     access_token_secret:  'Access_token_secret'
   }
   ```
+  
+## Configuring Time Between Bot Posts
+In `bot.js`, adjust `cron.schedule()` to your desired time of when you want the bot to post. Check out the syntax for `cron.schedule()` [here](https://github.com/node-cron/node-cron/blob/master/README.md)
+
 ## Running Iambic Bot
     $ npm start
