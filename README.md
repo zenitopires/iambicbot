@@ -5,7 +5,7 @@ See it live here https://twitter.com/the_iambic
 ---
 ## Requirements
 
-For development, you'll need Node.js and npm.
+For development, you'll need Node.js, npm, python3.6.
 
 ### Node
 - #### Node installation on Windows
@@ -45,6 +45,15 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
   Or you can install the package using pip
 
       $ pip install pattern
+- #### Syllable module installation
+
+      $ git clone https://github.com/prosegrinder/python-syllables
+      $ cd python-syllables
+      $ python setup.py install
+      
+  Or via pip
+  
+      $ pip install syllables
 
 ## Usage
 
