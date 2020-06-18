@@ -23,12 +23,14 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 - #### Other Operating Systems
   You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
 
-## Downloading Iambic Bot
+## Usage
+
+### Downloading Iambic Bot
 
     $ git clone https://github.com/zenitopires/iambicbot
     $ cd iambicbot
 
-## Configuring Authorization
+### Configuring Authorization
 Create a `config.js` file in the iambicbot directory and enter your Twitter authorization keys like so:
   ```
   module.exports = {
@@ -39,7 +41,7 @@ Create a `config.js` file in the iambicbot directory and enter your Twitter auth
   }
   ```
   
-## Configuring Time Between Bot Posts
+### Configuring Time Between Bot Posts
 In `bot.js`, adjust `cron.schedule()` to your desired time of when you want the bot to post. Check out the syntax for `cron.schedule()` [here](https://github.com/node-cron/node-cron/blob/master/README.md)
 
 ## Running Iambic Bot
